@@ -5,16 +5,16 @@ static const char *fonts[] = {
   "Hack:size=10"
 };
 static const char dmenufont[]       = "Hack:size=10";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
+static const char normbordercolor[] = "#222222";
+static const char normbgcolor[]     = "#000000";
+static const char normfgcolor[]     = "#aaaaaa";
+static const char selbordercolor[]  = "#aaaaaa";
+static const char selbgcolor[]      = "#000000";
+static const char selfgcolor[]      = "#dddddd";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -32,7 +32,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
