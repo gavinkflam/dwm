@@ -16,6 +16,9 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 
+/* 0 means using the scroll wheel on a window will not change focus */
+static const int focusonwheelscroll = 1;
+
 /* tagging */
 static const char *tags[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
