@@ -6,7 +6,7 @@
 pkgname=dwm
 pkgver=6.1.0
 _pkgver=6.1
-pkgrel=6
+pkgrel=7
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
 arch=('i686' 'x86_64')
@@ -28,6 +28,7 @@ prepare() {
 
 build() {
   cd $srcdir/$pkgname-$_pkgver
+  patch -p1 < ${startdir}/patches/00-dwm-noborder-6.1.diff
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
 }
 
