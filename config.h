@@ -11,7 +11,7 @@ static const char normfgcolor[]     = "#aaaaaa";
 static const char selbordercolor[]  = "#aaaaaa";
 static const char selbgcolor[]      = "#000000";
 static const char selfgcolor[]      = "#dddddd";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -36,8 +36,8 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-  { "[]=",      tile },    /* first entry is default */
-  { "><>",      NULL },    /* no layout function means floating behavior */
+  { "[T]",      tile },    /* first entry is default */
+  { "[F]",      NULL },    /* no layout function means floating behavior */
   { "[M]",      monocle },
 };
 
