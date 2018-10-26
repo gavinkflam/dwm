@@ -2,7 +2,7 @@
 
 /* appearance */
 static const char *fonts[] = {
-  "Hack:size=10"
+  "mono:size=10:antialias=true:autohint=true"
 };
 static const char dmenufont[]       = "Hack:size=10";
 static const char normbordercolor[] = "#222222";
