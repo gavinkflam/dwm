@@ -4,9 +4,9 @@
 # Contributor: Grigorios Bouzakis <grbzks@gmail.com>
 
 pkgname=dwm
-pkgver=6.1.0
-_pkgver=6.1
-pkgrel=15
+pkgver=6.2.0
+_pkgver=6.2
+pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ install=dwm.install
 source=(http://dl.suckless.org/dwm/dwm-$_pkgver.tar.gz
 	config.h
 	dwm.desktop)
-md5sums=('f0b6b1093b7207f89c2a90b848c008ec'
+md5sums=('9929845ccdec4d2cc191f16210dd7f3d'
          'SKIP'
          '939f403a71b6e85261d09fc3412269ee')
 
@@ -28,9 +28,8 @@ prepare() {
 
 build() {
   cd $srcdir/$pkgname-$_pkgver
-  patch -p1 < ${startdir}/patches/00-dwm-noborder-6.1.diff
-  patch -p1 < ${startdir}/patches/10-dwm-hide_vacant_tags-6.1.diff
-  patch -p1 < ${startdir}/patches/20-dwm-focusonclick-6.1.diff
+  patch -p1 < ${startdir}/patches/00-dwm-noborder-6.2.diff
+  patch -p1 < ${startdir}/patches/10-dwm-hide_vacant_tags-6.2.diff
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
 }
 

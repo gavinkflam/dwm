@@ -1,8 +1,6 @@
-diff --git a/dwm.c b/dwm.c
-index 0362114..e3209e5 100644
 --- a/dwm.c
 +++ b/dwm.c
-@@ -393,9 +393,24 @@ arrange(Monitor *m)
+@@ -394,9 +394,24 @@ arrange(Monitor *m)
  void
  arrangemon(Monitor *m)
  {
@@ -29,7 +27,7 @@ index 0362114..e3209e5 100644
  }
  
  void
-@@ -1123,10 +1138,19 @@ monocle(Monitor *m)
+@@ -1109,10 +1124,19 @@ monocle(Monitor *m)
  	for (c = m->clients; c; c = c->next)
  		if (ISVISIBLE(c))
  			n++;
@@ -52,7 +50,7 @@ index 0362114..e3209e5 100644
  }
  
  void
-@@ -1706,9 +1730,14 @@ togglefloating(const Arg *arg)
+@@ -1713,9 +1737,14 @@ togglefloating(const Arg *arg)
  	if (selmon->sel->isfullscreen) /* no support for fullscreen windows */
  		return;
  	selmon->sel->isfloating = !selmon->sel->isfloating || selmon->sel->isfixed;
@@ -63,8 +61,8 @@ index 0362114..e3209e5 100644
 +			selmon->sel->bw = borderpx;
 +		}
  		resize(selmon->sel, selmon->sel->x, selmon->sel->y,
--		       selmon->sel->w, selmon->sel->h, 0);
-+		       selmon->sel->w - selmon->sel->bw * 2, selmon->sel->h - selmon->sel->bw * 2, 0);
+-			selmon->sel->w, selmon->sel->h, 0);
++			selmon->sel->w - selmon->sel->bw * 2, selmon->sel->h - selmon->sel->bw * 2, 0);
 +	}
  	arrange(selmon);
  }
