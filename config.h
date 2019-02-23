@@ -62,17 +62,26 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *lockcmd[]  = { "xset", "s", "activate", NULL };
 
-static const char *brightnessupcmd[]   = { "brightnessctl", "s", "5%+", NULL };
+static const char *fmcmd[]      = { "pcmanfm", NULL };
+static const char *browsercmd[] = { "chromium", NULL };
+static const char *printcmd[]   = { "flameshot", "gui", NULL };
+static const char *passcmd[]    = { "passmenu", NULL };
+
 static const char *brightnessdowncmd[] = { "brightnessctl", "s", "5%-", NULL };
+static const char *brightnessupcmd[]   = { "brightnessctl", "s", "5%+", NULL };
+static const char *volumetogglecmd[]   = { "amixer", "set", "Master", "toggle", NULL };
 static const char *volumedowncmd[]     = { "amixer", "set", "Master", "5%-", NULL };
 static const char *volumeupcmd[]       = { "amixer", "set", "Master", "5%+", NULL };
-static const char *volumetogglecmd[]   = { "amixer", "set", "Master", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier              key                      function        argument */
 	{ MODKEY,                XK_d,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,                XK_n,                    spawn,          {.v = termcmd } },
 	{ MODKEY,                XK_Escape,               spawn,          {.v = lockcmd } },
+	{ MODKEY,                XK_e,                    spawn,          {.v = fmcmd } },
+	{ MODKEY,                XK_i,                    spawn,          {.v = browsercmd } },
+	{ MODKEY,                XK_p,                    spawn,          {.v = printcmd } },
+	{ MODKEY,                XK_s,                    spawn,          {.v = passcmd } },
 	{ MODKEY,                XK_F1,                   spawn,          {.v = brightnessdowncmd } },
 	{ MODKEY,                XK_F2,                   spawn,          {.v = brightnessupcmd } },
 	{ MODKEY,                XK_F10,                  spawn,          {.v = volumetogglecmd } },
